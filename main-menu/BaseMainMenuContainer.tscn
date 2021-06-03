@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://screens/main-menu/BaseMainMenuContainer.gd" type="Script" id=1]
+
+[node name="BaseMainMenuContainer" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = 50.0
+margin_right = -50.0
+margin_bottom = -50.0
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 1500.0
+margin_bottom = 800.0
+custom_constants/separation = 10
+
+[node name="TopBar" type="MarginContainer" parent="VBoxContainer"]
+margin_right = 1500.0
+margin_bottom = 44.0
+mouse_filter = 2
+
+[node name="BackButton" type="Button" parent="VBoxContainer/TopBar"]
+margin_right = 44.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 44, 44 )
+focus_mode = 0
+size_flags_horizontal = 0
+text = "Back"
+
+[node name="Control" type="Control" parent="VBoxContainer/TopBar"]
+margin_right = 1500.0
+margin_bottom = 44.0
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TopBar/Control"]
+anchor_left = 0.4
+anchor_right = 0.6
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/TopBar/Control/MarginContainer"]
+margin_right = 300.0
+margin_bottom = 44.0
+mouse_filter = 2
+color = Color( 0.172549, 0.172549, 0.172549, 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TopBar/Control/MarginContainer"]
+margin_right = 300.0
+margin_bottom = 44.0
+mouse_filter = 2
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/TopBar/Control/MarginContainer/MarginContainer"]
+margin_left = 10.0
+margin_top = 15.0
+margin_right = 290.0
+margin_bottom = 29.0
+text = "changeme"
+align = 1

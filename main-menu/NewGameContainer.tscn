@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://screens/main-menu/BaseMainMenuContainer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://screens/main-menu/NewGameContainer.gd" type="Script" id=2]
+
+[node name="NewGameContainer" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="ColorRect" parent="VBoxContainer/TopBar/Control/MarginContainer" index="0"]
+color = Color( 0.172549, 0.172549, 0.172549, 1 )
+
+[node name="Label" parent="VBoxContainer/TopBar/Control/MarginContainer/MarginContainer" index="0"]
+text = "New Game"
